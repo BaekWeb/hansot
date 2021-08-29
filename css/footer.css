@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+/* footer style */
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #f5ca00;
+}
+.footer > div {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.footer > div .top {
+  position: relative;
+  border-bottom: 1px solid rgba(55,55,55,0.2);
+}
+.footer > div .top > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 90px;
+  margin: 0 auto;
+}
+.footer > div .top > ul > li {
+  display: inline-block;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-right: 2px solid rgba(55,55,55,0.2);
+  font-weight: bold;
+}
+.footer > div .top > ul > li:last-child {
+  border-right: none;
+}
+.footer > div .top > .award {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 120px;
+}
+.footer > div .bottom {
+  position: relative;
+  padding: 30px 0;
+}
+.footer > div .bottom > h2 {
+  display: none;
+  cursor: pointer;
+}
+.footer > div .bottom > h2 a {
+  position: relative;
+}
+.footer > div .bottom > h2 a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%) rotate(180deg);
+
+  width: 12px;
+  height: 12px;
+  background: url("../image/icon/iconmonstr-arrow-81-32.png") no-repeat center;
+  background-size: cover;
+  transition: 0.5s;
+}
+.footer > div .bottom > h2:hover a::after {
+  transform: translateY(-50%);
+}
+
+
+
+.footer > div .bottom > div {
+  text-align: center;
+}
+.footer > div .bottom > div .text {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.footer > div .bottom > div .text > li {
+  display: inline-block;
+  padding: 0 10px;
+  border-right: 1px solid rgba(55,55,55,0.2);
+  font-weight: 700;
+}
+.footer > div .bottom > div .text > li:last-child {
+  border-right: none;
+}
+.footer > div .bottom > p {
+  padding: 20px 0;
+  font-weight: 700;
+  text-align: center;
+}
+.footer > div .bottom > .icon {
+  width: max-content;
+  margin: 0 auto;
+}
+.footer > div .bottom > .icon > li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 0 10px;
+}
+
+/* tablet - 768px ~ 1023px*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer > div .top {
+    padding: 20px 0;
+  }
+  .footer > div .top > ul {
+    height: 40px;
+  }
+  .footer > div .top > .award {
+    position: static;
+    margin: 80px auto 0 auto;
+    width: 180px;
+    transform: none;
+  }
+  .footer > div .bottom {
+    position: static;
+    padding: 0;
+  }
+  .footer > div .bottom > h2 {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .footer > div .bottom > div {
+    display: none;
+    padding: 10px;
+    background-color: rgba(55,55,55,0.2);
+    text-align: left;
+  }
+  .footer > div .bottom > div .text {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .footer > div .bottom > div .text > li {
+    display: block;
+    border-right: none;
+  }
+  .footer > div .bottom > .icon {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* mo -  ~ 767px*/
+@media all and (max-width: 767px) {
+  .footer > div .top {
+    padding: 20px 0;
+  }
+  .footer > div .top > ul {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40px;
+  }
+  .footer > div .top > ul li {
+    font-size: 13px;
+  }
+  .footer > div .top > .award {
+    position: static;
+    margin: 80px auto 0 auto;
+    width: 180px;
+    transform: none;
+  }
+  .footer > div .bottom {
+    position: static;
+    padding: 0;
+  }
+  .footer > div .bottom > h2 {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .footer > div .bottom > div {
+    display: none;
+    padding: 10px;
+    background-color: rgba(55,55,55,0.2);
+    text-align: left;
+  }
+  .footer > div .bottom > div .text {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .footer > div .bottom > div .text > li {
+    display: block;
+    border-right: none;
+  }
+  .footer > div .bottom > p {
+    font-size: 13px;
+  }
+  .footer > div .bottom > .icon {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* franchise style - 가맹점*/
+.franchise {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 175px 175px 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 120px);
+
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.franchise > div {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+.franchise .box01 {
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-color: #f5ca00;
+}
+.franchise .box01 > strong {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 45px;
+}
+.franchise .box01 > p {
+  margin-top: 20px;
+  line-height: 28px;
+  white-space: pre-line;
+}
+
+
+
+/* tablet - 768px ~ 1023px*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .franchise {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 120px);
+  }
+  .franchise .box01 {
+    grid-column: span 6;
+  }
+  .franchise .box02 {
+    grid-column: span 3;
+  }
+}
+
+/* mo -  ~ 767px*/
+@media all and (max-width: 767px) {
+  .franchise {
+    display: block;
+    padding: 0;
+  }
+  .franchise .box01 {
+    padding: 20px;
+    height: 400px;
+  }
+  .franchise .box01 > strong {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .franchise .box01 > p {
+    white-space: normal;
+  }
+  .franchise .box02 {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .franchise > div:nth-child(2) {
+    margin: -140px auto 0 auto;
+  }
+  .franchise > div:nth-child(3) {
+    margin: 20px 0 0 0;
+  }
+}

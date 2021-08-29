@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* visual style */
+.visual {
+  position: relative;
+  width: 100%;
+  height: 660px;
+  overflow: hidden;
+}
+.visual a {
+  width: 100%;
+  height: 100%;
+}
+.visual a img:nth-child(2) {
+  display: none;
+}
+.visual .swiper-button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.visual .swiper-button ul {
+  position: relative;
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.visual .swiper-button ul .swiper-pagination {
+  position: absolute;
+  bottom: 80px;
+}
+.visual .swiper-button ul .swiper-pagination .swiper-pagination-bullet {
+  width: 60px;
+  height: 5px;
+  margin-right: 5px;
+  border-radius: 0;
+  background-color: #373737;
+}
+.visual .swiper-button ul .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #f5ca00;
+}
+.visual .swiper-button ul .swiper-button-prev::after,
+.visual .swiper-button ul .swiper-button-next::after {color:#373737;}
+.visual .swiper-button ul .swiper-button-prev:hover:after,
+.visual .swiper-button ul .swiper-button-next:hover:after {color:#f5ca00;}
+
+/* tablet - 768px ~ 1023px*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .visual {
+    height: auto;
+  }
+  .visual .swiper-button ul {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .visual .swiper-button ul .swiper-pagination {
+    bottom: 20px;
+  }
+  .visual .swiper-button ul .swiper-pagination .swiper-pagination-bullet {
+    width: 45px;
+  }
+}
+
+/* mo -  ~ 767px*/
+@media all and (max-width: 767px) {
+  .visual {
+    height: 320px;
+  }
+  .visual a img:nth-child(1) {
+    display: none;
+  }
+  .visual a img:nth-child(2) {
+    display: block;
+  }
+  .visual .swiper-button ul {
+    margin: 0 20px;
+    padding: 0;
+  }
+  .visual .swiper-button ul .swiper-pagination {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    bottom: 20px;
+  }
+  .visual .swiper-button ul .swiper-pagination .swiper-pagination-bullet {
+    flex: 1;
+    width: auto;
+    margin-right: 0;
+  }
+  .visual .swiper-button ul .swiper-button-prev,
+  .visual .swiper-button ul .swiper-button-next {display: none;}
+}

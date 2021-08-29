@@ -1,0 +1,93 @@
+body {
+  font-size: 15px;
+  color: #373737;
+  letter-spacing: -1px;
+}
+
+/* card 스타일 */
+.card {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+}
+.card .image {
+  flex: 1;
+  overflow: hidden;
+}
+.card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.card .text {
+  position: relative;
+  padding: 20px;
+  border-bottom: 7px solid #373737;
+  box-sizing: border-box;
+  background-color: #fcfdfb;
+}
+.card .text::after {
+  display: block;
+  content: " ";
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0; 
+  width: 0%;
+  height: 7px;
+  margin: 0 auto;
+  background-color: #f5ca00;
+  transition: 1s;
+}
+.card:hover .text::after {
+  width: 100%;
+}
+.card .text > strong {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.card .text .next_icon {
+  margin-top: 20px;
+}
+.card .text .next_icon p {
+  position: relative;
+  padding: 0 30px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.card .text .next_icon > p::before {
+  display: inline-block;
+  content: " ";
+  clear: both;
+  
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+  background: url("../image/icon/start_icon.png") no-repeat left;
+  background-size: cover;  
+}
+.card:hover .image img {
+  transform: scale(1.2);
+}
+.card:hover .text .next_icon > p::before {
+  background: url("../image/icon/start_icon_gold.png") no-repeat left;
+  background-size: cover;
+}
+
+/* mo -  ~ 767px*/
+@media all and (max-width: 767px) {
+  .card .text {
+    padding: 10px;
+  }
+  .card .text > strong {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+/* card 스타일 end */

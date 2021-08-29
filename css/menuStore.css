@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* menuStore style - 메뉴, 매장 찾기 */
+.menu_store {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* mo -  ~ 767px*/
+@media all and (max-width: 767px) {
+  .menu_store {
+    flex-flow: column;
+  }
+}
